@@ -21,7 +21,7 @@ Este dashboard apresenta uma análise fictícia de vendas de 2010 até 2014 da e
 
 ✔️ Padronização dos formatos e tipos de dados para garantir a consistência.
 
-✔️ Construção de tabelas dinâmicas (Excel) para responder às perguntas propostas.
+✔️ Criação de view no SQL Server para exportar ao Power BI.
 
 ✔️ Integração dos insights em um dashboard interativo com filtros dinâmicos.
 
