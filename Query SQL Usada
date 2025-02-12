@@ -1,0 +1,21 @@
+create or alter view RESULTADOS_ADW as
+
+select 
+	fis.SalesOrderNumber AS 'Nº VENDAS',
+	fis.OrderDate AS 'DATA DE PEDIDO',
+	dpc.EnglishProductCategoryName AS 'CATEGORIA',
+	dc.CustomerKey AS ' ID CLIENTE',
+	dc.FirstName + ' ' + dc.LastName AS 'NOME CLIENTE',
+	Replace(REPLACE(dc.Gender, 'M', 'Masculino'),'F', 'Feminino') AS 'GÊNERO',
+	dg.EnglishCountryRegionName AS 'PAÍS',
+	fis.OrderQuantity AS 'QTD. VENDIDA',
+	fis.SalesAmount AS 'RECEITA VENDA',
+	fis.TotalProductCost AS 'CUSTO DO PRODUTO',
+	fis.SalesAmount - fis.TotalProductCost as 'LUCRO'
+from
+	FactInternetSales fis join DimProduct dp on
+	fis.ProductKey = dp.ProductKey join DimProductSubcategory dps on
+	dp.ProductSubcategoryKey = dps.ProductSubcategoryKey join DimProductCategory dpc on
+	dps.ProductCategoryKey = dpc.ProductCategoryKey join DimCustomer dc on
+	fis.CustomerKey = dc.CustomerKey join DimGeography dg on
+	fis.SalesTerritoryKey = dg.SalesTerritoryKey
