@@ -1,6 +1,6 @@
-# AdventureWorks-Dashboard-Comercial-Usando-Power-BI e SQL-
+# Dashboard-Comercial-Usando-Power-BI e SQL-
 # Objetivo do Projeto
-Este dashboard apresenta uma análise fictícia de vendas de 2010 até 2014 da empresa fictícia Adventure Works. O objetivo é ilustrar como métricas e insights podem ser utilizados para entender o comportamento dos clientes e otimizar estratégias de vendas para os próximos anos.
+Este dashboard apresenta uma análisede vendas. O objetivo é ilustrar como métricas e insights podem ser utilizados para entender o comportamento dos clientes e otimizar estratégias de vendas para os próximos anos.
 
 
 # Principais Métricas e Questões Analisadas
